@@ -9,15 +9,11 @@
 
 .page-main {
   background-color: $white;
-  //min-width: $min-width;
   padding-bottom: $margin*6;
-  position: relative;
   top: $pagetop;
   min-height: calc(100vh - 56px);
 
   &--maxwidth {
     max-width: 1032px;
   }
-
-  @include transition(all, ease-in, .25s);
 }
