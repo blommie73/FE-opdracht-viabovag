@@ -11,6 +11,8 @@ const ul = document.querySelector('#cars');
 
 const url = location + 'api/api.json';
 
+const location_img = location;
+
 fetch(url)
     .then(res => res.json())
     .then(data => {
@@ -21,7 +23,7 @@ fetch(url)
                 span = createNode('span');
                 a = createNode('a');
                 li.classList.add('carslist__item');
-                img.src = car.images[0];
+                img.src = location_img + car.images[0];
                 img.classList.add('carslist__img');
                 span.innerText = car.brand;
                 a.innerText = 'details';
