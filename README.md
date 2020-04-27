@@ -162,3 +162,5 @@ cd dist && http-server
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+check website at https://blommie73.github.io/FE-opdracht-viabovag/dist/

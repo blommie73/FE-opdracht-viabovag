@@ -49,10 +49,7 @@ module.exports = {
       { from: 'src/api', 
         to: 'api' },
       { from: 'src/images', 
-        to: 'images' },
-      {
-        from: 'src', 
-        to: '' },
+        to: 'images' }
     ]),
 
     /**
