@@ -56,11 +56,11 @@ module.exports = {
      * HtmlWebpackPlugin
      *
      * Generates an HTML file from a template.
-     */
+     */ 
     new HtmlWebpackPlugin({
       title: 'Front End opdracht ViaBovag',
       //favicon: paths.static + '/favicon.png',
-      template: paths.src + '/template.html', // template file
+      template: paths.src + '/index.html', // template file
       filename: 'index.html', // output file
     }),
     new HtmlWebpackPlugin({
