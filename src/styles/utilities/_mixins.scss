@@ -1,0 +1,95 @@
+/*
+    Mixins
+    Globally used mixins and functions should be placed here. Specific mixins should be placed in the partial where they make sense, e.g. an icon font mixin inside the typography partial.
+*/
+
+@mixin text--wordwrap {
+    hyphens: auto;
+
+    @supports not(hyphens: auto) {
+        word-wrap: break-word;
+    }
+
+    @include bp-md {
+        hyphens: none;
+
+        @supports not(hyphens: auto) {
+            word-wrap: normal;
+        }
+    }
+}
+
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    transition: $transition-property $transition-time $method;
+}
+
+/*
+    Mixin: Breakpoints
+    Used for naming our media queries and therefore easier use of media queries.
+*/
+
+@mixin bp-sm{
+    @media only screen and (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin bp-md{
+    @media only screen and (min-width: 992px){
+        @content;
+    }
+}
+
+@mixin bp-lg{
+    @media only screen and (min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}

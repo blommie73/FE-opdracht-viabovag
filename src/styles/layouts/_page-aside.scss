@@ -1,0 +1,11 @@
+/*
+    page aside
+*/
+.page-aside {
+  font-weight: 600;
+  padding: 0;
+  position: relative;
+  top: $pagetop;
+
+  @include transition(all, ease-in, .25s);
+}

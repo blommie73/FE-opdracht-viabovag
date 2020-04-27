@@ -1,17 +1,23 @@
 
-@import 'variables';
+/******* VARS *******/
+@import "utilities/variables";
 
-html {
-  font-size: $root-font-size;
-  font-family: $font-family;
-  max-width: $page-width;
-  margin: 0 auto;
-  text-align: center;
-}
+/******* 3RD PARTY *******/
+@import "utilities/normalize",
+        "utilities/bootstrap";
 
-body {
-  background-color: yellow;
-}
-p {
-  font-size: $paragraph-font-size;
-}
+/******* UTILITIES *******/
+@import "utilities/_mixins",
+        "utilities/_breakpoints.scss",
+        "utilities/_helpers",
+        "utilities/_typography";
+
+/******* LAYOUTS *******/
+@import "layouts/_body",
+        "layouts/_page-header",
+        "layouts/_page-main",
+        "layouts/_page-footer",
+        "layouts/_page-aside";
+
+/******* COMPONENTS *******/
+@import "components/_carslist"

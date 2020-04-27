@@ -1,0 +1,54 @@
+// Variables
+
+// Text
+$primary_font:       'Open Sans', sans-serif !default;
+$primary_titlefont:  'Open Sans', sans-serif !default;
+$secondary_font:     'Roboto', sans-serif !default;
+$text-base-size:      14px !default;
+
+// Colors
+$white:               #fff !default;
+$grey-light:          #f0f0f0 !default;
+$grey-light-56:       rgba($grey-light, .56) !default;
+$grey:                #b7b7b7 !default;
+$grey-dark:           #54585a !default;
+$black:               #000 !default;
+
+$primary-color:       #0033a0 !default;
+$primary-color-light-76: rgba($primary-color, .76) !default;
+$secondary_color:     #2AD2C9;
+$secondary_color-light-68: rgba($secondary_color, .68) !default;
+$tertiary_color:      #009CA6;
+
+$errors:              #EC1C29;
+$errors-light-07: rgba($errors, .07) !default;
+$assets:              #009CA6;
+$sold:                #582C83;
+$warnings:            #EFDF00;
+$signoff:             #6CC24A;
+
+// Grid breakpoints
+$grid-breakpoints: (
+        xs:           0,
+        sm:           576px,
+        md:           768px,
+        lg:           992px,
+        xl:           1200px
+) !default;
+
+// Grid containers
+$container-max-widths: (
+        sm:           540px,
+        md:           720px,
+        lg:           960px,
+        xl:           1140px
+) !default;
+
+// Grid columns
+$min-width:           1064px;
+$grid-columns:        16 !default;
+$grid-gutter-width:   32px !default;
+$margin:              16px !default;
+$pagetop:             56px !default;
+
+
