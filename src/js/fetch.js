@@ -27,13 +27,11 @@ fetch(url)
         console.error('Error: ', err.message);
     });
     
-function initDetails(data) {
-    data.vehicles.map(() => {
-        let div = createNode('div');
-        div.classList.add('carsdetails');
-        div.innerText = 'alle details';
-        appendNode(carsDetails, div);
-    });
+function initDetails() {
+    let div = createNode('div');
+    div.classList.add('carsdetails');
+    div.innerText = 'alle details';
+    appendNode(carsDetails, div);
 }
 
 function initCarslist(data) {
